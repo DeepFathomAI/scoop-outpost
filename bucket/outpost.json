@@ -1,0 +1,26 @@
+{
+    "version": "0.4.1",
+    "description": "Deep Fathom Outpost compliance CLI",
+    "homepage": "https://www.deepfathom.ai/outpost",
+    "license": "Proprietary",
+    "notes": "Outpost is proprietary commercial software. See https://www.deepfathom.ai/outpost for licensing.",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.deepfathom.ai/outpost/public/stable/v0.4.1/outpost-cli-win-x64-v0.4.1.zip",
+            "hash": "c839fb67127b9310273bee9690b81c4e8b23e6aa01034922a1141639bb950c29",
+            "bin": "outpost.exe"
+        }
+    },
+    "checkver": {
+        "url": "https://cdn.deepfathom.ai/outpost/public/stable/releases.json",
+        "jsonpath": "$.latest.version",
+        "regex": "v?([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.deepfathom.ai/outpost/public/stable/v$version/outpost-cli-win-x64-v$version.zip"
+            }
+        }
+    }
+}
